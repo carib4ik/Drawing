@@ -7,6 +7,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        _toolController.SpawnNewLine += _drawer.AddLine;
+        _toolController.SpawnNewLine += _drawer.SetColor;
     }
 }
