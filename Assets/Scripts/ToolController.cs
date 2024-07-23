@@ -8,6 +8,7 @@ public class ToolController : MonoBehaviour
     
     [SerializeField] private GameObject _line;
     [SerializeField] private Button[] _buttons;
+    [SerializeField] private Button _sponge;
     
     private void Awake()
     {

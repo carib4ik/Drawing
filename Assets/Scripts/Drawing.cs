@@ -30,6 +30,11 @@ public class Draw : MonoBehaviour
                 _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, drawingPoint);
             }
         }
+
+        if (Input.GetMouseButtonUp(0) && _lineRenderer != null)
+        {
+            
+        }
     }
 
     public void AddLine(LineRenderer lineRenderer)
@@ -37,5 +42,15 @@ public class Draw : MonoBehaviour
         _lineRenderer = lineRenderer;
         _lineRenderer.positionCount = 0;
         _lines.Add(lineRenderer);
+    }
+
+    public void EraseEverything()
+    {
+        foreach (var lineRenderer in _lines)
+        {
+            Destroy(lineRenderer.gameObject);
+        }
+        
+        _lines.Clear();
     }
 }
